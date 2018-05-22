@@ -1,6 +1,6 @@
-#Developed by Quanshi Zhang
+# Developed by Quanshi Zhang
 
-#License & disclaimer
+# License & disclaimer
 
 Copyright 2014 Quanshi Zhang (zqs1022@gmail.com, zhangqs@g.ucla.edu)
 This software can be used for research purposes only. 
@@ -9,7 +9,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 This code applies "Tree-reweighted max-product message passing algorithm (TRW-S), verstion 1.3", which is developed by Microsoft Research. You need to agree the Microsoft Research Shared Source license agreement ("MSR-SSLA") before using it. Please read "./TRW_S/LICENSE.TXT" for details.
 
 
-#Compile the code.
+# Compile the code.
 
 run compile;
 
@@ -19,7 +19,7 @@ Please directly run the demo. The initial model only has three nodes (object par
 run demo;
 
 
-#Parallel computing
+# Parallel computing
 
 This mining process (mSAP_main.p) supports parallel computing. You can simply open some matlab workers before running the program.
 For example,
@@ -28,18 +28,21 @@ run matlabpool(2);
 run demo;
 
 
-#Design of attributes
+# Design of attributes
 
 You can define your own unary and pairwise attributes (features) for your own applications. These features can be used as the input of the graph-mining algorithm. Please see mSAP_produce_SIFTImg.m to understand the data structure of the ARG.
 
 
-#Citation
+# Citation
 
 You should cite the following paper, if you use this software.
 
 1. Quanshi Zhang, Xuan Song, Xiaowei Shao, Huijing Zhao, and Ryosuke Shibasaki, "Attributed Graph Mining and Matching: An Attempt to Define and Extract Soft Attributed Patterns", in Proc. of IEEE International Conference on Computer Vision and Pattern Recognition (CVPR) 2014.
 
 2. Quanshi Zhang, Xuan Song, Xiaowei Shao, Huijing Zhao, and Ryosuke Shibasaki, "Object Discovery: Soft Attributed Graph Mining", to appear in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI).
+
+
+# Others
 
 In fact, you can design your own unary and pairwise features, and use these features as the input of the graph-mining algorithm. In our demo, we apply the SIFT keypoint detector developed by David Lowe. If you use "FeatureExtraction_SIFTImg.m" to extract features, please cite David G. Lowe, "Distinctive image features from scale-invariant keypoints," International Journal of Computer Vision, 60, 2 (2004), pp. 91-110. Please see the website (http://www.cs.ubc.ca/~lowe/keypoints/) for details
 
