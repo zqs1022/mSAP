@@ -1,6 +1,6 @@
-Developed by Quanshi Zhang
+#Developed by Quanshi Zhang
 
-License & disclaimer
+#License & disclaimer
 
 Copyright 2014 Quanshi Zhang (zqs1022@gmail.com, zhangqs@g.ucla.edu)
 This software can be used for research purposes only. 
@@ -9,31 +9,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 This code applies "Tree-reweighted max-product message passing algorithm (TRW-S), verstion 1.3", which is developed by Microsoft Research. You need to agree the Microsoft Research Shared Source license agreement ("MSR-SSLA") before using it. Please read "./TRW_S/LICENSE.TXT" for details.
 
 
-Compile the code.
+#Compile the code.
 
->> compile;
+run compile;
 
-Use of the software.
+#Use of the software.
 Please directly run the demo. The initial model only has three nodes (object parts). The mined maximal-size SAP will be saved in the directory of "./mat/Models/".
 
->> demo;
+run demo;
 
 
-Parallel computing
+#Parallel computing
 
 This mining process (mSAP_main.p) supports parallel computing. You can simply open some matlab workers before running the program.
 For example,
 
->> matlabpool(2);
->> demo;
+run matlabpool(2);
+run demo;
 
 
-Design of attributes
+#Design of attributes
 
 You can define your own unary and pairwise attributes (features) for your own applications. These features can be used as the input of the graph-mining algorithm. Please see mSAP_produce_SIFTImg.m to understand the data structure of the ARG.
 
 
-Citation
+#Citation
 
 You should cite the following paper, if you use this software.
 
@@ -44,10 +44,8 @@ You should cite the following paper, if you use this software.
 In fact, you can design your own unary and pairwise features, and use these features as the input of the graph-mining algorithm. In our demo, we apply the SIFT keypoint detector developed by David Lowe. If you use "FeatureExtraction_SIFTImg.m" to extract features, please cite David G. Lowe, "Distinctive image features from scale-invariant keypoints," International Journal of Computer Vision, 60, 2 (2004), pp. 91-110. Please see the website (http://www.cs.ubc.ca/~lowe/keypoints/) for details
 
 
-
 In order to extract the SIFT features (the preprocessing of constructing the ARGs in this demo), please
 1. go to the "mSAP_produce_SIFTImg" directory
-2. run
-FeatureExtraction_SIFTImg('panda'); % only based on the windows system
+2. run FeatureExtraction_SIFTImg('panda'); % only based on the windows system
 
 In order to define your own unary and pairwise features, please see mSAP_produce_SIFTImg.m to understand the data structure of the ARG.
